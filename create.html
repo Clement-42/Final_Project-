@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="an">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create your list</title>
+  <link rel="stylesheet" href="Project40k.css" />
+</head>
+
+<body>
+
+  <header>
+    <button id="burger">&#9776;</button>
+    <h1>Create your list</h1>
+    <div id="user-info" class="user-info"></div>
+  </header>
+
+  <div id="sidebar" class="sidebar hidden">
+    <nav>
+      <a href="Project40k.html">Home</a>
+      <a href="list_saved.html">Your List</a>
+      <a href="login.html">Connection/Login</a>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <main>
+      <h2>Create your Warhammer 40K list</h2>
+
+      <div>
+        <label for="category">Category :</label>
+        <select id="category">
+          <option value="">-- Choose --</option>
+          <option value="Chaos">Chaos</option>
+          <option value="Xenos">Xenos</option>
+          <option value="Imperium">Imperium</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="faction">Armies :</label>
+        <select id="faction" disabled>
+          <option value="">-- choose your faction --</option>
+        </select>
+      </div>
+
+      <div id="units"></div>
+
+      <hr />
+      <h3>Your army list</h3>
+      <div id="army-list"></div>
+      <p><strong>Total cost :</strong> <span id="total-points">0</span> pts</p>
+      <button id="save-list">💾 Save list</button>
+    </main>
+
+    <footer>
+      &copy; 2025 Army Forge - DREVET Clément
+    </footer>
+    
+  </div>
+
+  <script src="create.js"></script>
+</body>
+</html>
