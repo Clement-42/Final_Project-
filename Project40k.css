@@ -145,10 +145,10 @@ button:hover {
 
 .unit-image {
   width: 100%;
-  max-width: 700px;       /* Taille max de l’image */
+  max-width: 700px;       
   height: auto;
   display: block;
-  margin: 0 auto 15px auto;  /* Centre l’image */
+  margin: 0 auto 15px auto;  
   border-radius: 12px;
   object-fit: contain;
 }
