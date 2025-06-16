@@ -6,21 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
     sidebar.classList.toggle("show");
   });
 
-const content = document.querySelector(".main-content");
+  const content = document.querySelector(".main-content");
 
-window.addEventListener("DOMContentLoaded", () => {
-  const user = JSON.parse(localStorage.getItem("currentUser"));
-  const userInfoDiv = document.getElementById("user-info");
+  window.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+    const userInfoDiv = document.getElementById("user-info");
 
-  if (user && userInfoDiv) {
-    userInfoDiv.innerHTML = `Connected as <strong>${user.username}</strong> 
+    if (user && userInfoDiv) {
+      userInfoDiv.innerHTML = `Connected as <strong>${user.username}</strong> 
       <button id="logout">Logout</button>`;
       
-    document.getElementById("logout").addEventListener("click", () => {
-      localStorage.removeItem("currentUser");
-      alert("Logout");
-      window.location.href = "login.html";
-    });
-  }
-});
+      document.getElementById("logout").addEventListener("click", () => {
+        localStorage.removeItem("currentUser");
+        alert("Logout");
+        window.location.href = "login.html";
+      });
+    }
+  });
 });
