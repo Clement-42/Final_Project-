@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="an">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create your list</title>
-  <link rel="stylesheet" href="Project40k.css" />
+  <link rel="stylesheet" href="Project40k.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,10 +14,10 @@
   <header>
     <button id="burger">&#9776;</button>
     <h1>Create your list</h1>
-    <div id="user-info" class="user-info"></div>
+    <div class="user-info" id="user-info"></div>
   </header>
 
-  <div id="sidebar" class="sidebar hidden">
+  <div class="sidebar" id="sidebar">
     <nav>
       <a href="Project40k.html">Home</a>
       <a href="list_saved.html">Your List</a>
@@ -28,8 +29,8 @@
     <main>
       <h2>Create your Warhammer 40K list</h2>
 
-      <div>
-        <label for="category">Category :</label>
+      <div class="fade-in slide-in">
+        <label for="category">Category:</label>
         <select id="category">
           <option value="">-- Choose --</option>
           <option value="Chaos">Chaos</option>
@@ -38,19 +39,35 @@
         </select>
       </div>
 
-      <div>
-        <label for="faction">Armies :</label>
+      <div class="fade-in slide-in">
+        <label for="faction">Faction:</label>
         <select id="faction" disabled>
-          <option value="">-- choose your faction --</option>
+          <option value="">-- Choose your faction --</option>
         </select>
       </div>
 
-      <div id="units"></div>
+      <div class="fade-in slide-in">
+        <label for="unit-type">Unit Type:</label>
+        <select id="unit-type" disabled>
+          <option value="">-- Choose unit type --</option>
+        </select>
+      </div>
+
+      <div class="fade-in slide-in">
+        <label for="unit">Unit:</label>
+        <select id="unit" disabled>
+          <option value="">-- Choose unit --</option>
+        </select>
+      </div>
+
+      <div id="unit-preview"></div>
+
+      <div id="units-container" class="units-wrapper"></div>
 
       <hr />
-      <h3>Your army list</h3>
+      <h3>Your Army List</h3>
       <div id="army-list"></div>
-      <p><strong>Total cost :</strong> <span id="total-points">0</span> pts</p>
+      <p><strong>Total cost:</strong> <span id="total-points">0</span> pts</p>
       <button id="save-list">💾 Save list</button>
     </main>
 
@@ -62,4 +79,5 @@
 
   <script src="create.js"></script>
 </body>
+
 </html>
