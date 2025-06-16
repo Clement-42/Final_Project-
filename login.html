@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html lang="an">
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connection/Login</title>
   <link rel="stylesheet" href="Project40k.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
   <header>
     <button id="burger">&#9776;</button>
     <h1>Connection/Login</h1>
-    <div id="user-info" class="user-info"></div>
+    <div class="user-info" id="user-info"></div>
   </header>
 
-  <div id="sidebar" class="sidebar hidden">
+  <div class="sidebar" id="sidebar">
     <nav>
       <a href="Project40k.html">Home</a>
       <a href="create.html">Create list</a>
@@ -24,18 +25,21 @@
 
   <div class="main-content">
     
-    <main>
-      <h2>Login</h2>
-      <input type="text" id="login-username" placeholder="username" />
-      <input type="password" id="login-password" placeholder="password" />
-      <button onclick="login()">Login</button>
+    <main class="auth-container">
+      <div class="form-box">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="username or email" />
+        <input type="password" id="login-password" placeholder="password" />
+        <button onclick="login()">Login</button>
+      </div>
 
-      <hr />
-
-      <h2>Sign up</h2>
-      <input type="text" id="register-username" placeholder="New username" />
-      <input type="password" id="register-password" placeholder="password" />
-      <button onclick="register()">Create account</button>
+      <div class="form-box">
+        <h2>Sign up</h2>
+        <input type="text" id="register-username" placeholder="New username" />
+        <input type="email" id="register-email" placeholder="Email" />
+        <input type="password" id="register-password" placeholder="Password" />
+        <button onclick="register()">Create account</button>
+      </div>
     </main>
 
     <footer>
