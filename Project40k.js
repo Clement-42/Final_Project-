@@ -1,12 +1,12 @@
 
-const burger = document.getElementById("burger");
-const sidebar = document.getElementById("sidebar");
-const content = document.querySelector(".main-content");
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger");
+  const sidebar = document.getElementById("sidebar");
+  burger.addEventListener("click", () => {
+    sidebar.classList.toggle("show");
+  });
 
-burger.addEventListener("click", () => {
-  sidebar.classList.toggle("hidden");
-  content.classList.toggle("shifted");
-});
+const content = document.querySelector(".main-content");
 
 window.addEventListener("DOMContentLoaded", () => {
   const user = JSON.parse(localStorage.getItem("currentUser"));
@@ -22,4 +22,5 @@ window.addEventListener("DOMContentLoaded", () => {
       window.location.href = "login.html";
     });
   }
+});
 });
